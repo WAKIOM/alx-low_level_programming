@@ -23,3 +23,5 @@ The output file should be named the same as the C file, but with the extension .
 4. `3-name`  - a script that compiles a C file and creates an executable named cisfun.
 The C file name will be saved in the variable $CFILE
 5. `4-puts.c` -a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line using the function `puts`
+6. `5-printf.c` - a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
+Using the function printf
