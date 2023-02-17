@@ -6,28 +6,26 @@
  */
 
 int main(void)
-{
-	int x, y;
+{	int d, p;
 
- 	for (x = 0; x <= 8; x++)
+	for (d = '0'; d < '9'; d++)
 	{
-
-	for (y = 0; y <= 9; y++)
+		for (p = d + 1; p <= '9'; p++)
 		{
-		 putchar(x + '0');
-		 putchar(y + '0');
-			if (x <= 8 || y <= 9)
+			if (p != d)
 			{
+				putchar(d);
+				putchar(p);
+
+				if (d == '8' && p == '9')
+					continue;
+
 				putchar(',');
 				putchar(' ');
 			}
-			
-
 		}
 	}
 	putchar('\n');
-	return 0;
 
-
-
+	return (0);
 }
