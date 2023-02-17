@@ -20,3 +20,4 @@ You are not allowed to use any variable of type char. You can only use the putch
 8. `7-print_tebahpla.c` - Write a program that prints the lowercase alphabet in reverse, followed by a new line using the Putchar function twice only 
 9. `8-print_base16.c` - Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
 You can only use the putchar and use it twice only
+10. `9-print_comb.c` -  a program that prints all single-digit numbers separated by , and space using only putchar and not char.

@@ -7,23 +7,18 @@
 
 int main(void)
 {
-	int i, j;
+		int x;
 
-    for (i = 0; i < 10; i++)
-    {
-        for (j = i; j < 10; j++)
+	for (x = '0'; x <= '9'; x++)
 	{
-            putchar(i + '0');
-            putchar(j + '0');
-            if (i < 9 || j < 9)
-	    {
-                putchar(',');
-                putchar(' ');
-            }
-        }
-    }
+		putchar(x);
+		if (x != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 
-    return 0;
-
-
+	return (0);
 }
