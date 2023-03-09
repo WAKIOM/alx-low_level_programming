@@ -21,4 +21,7 @@ General
 + Don’t forget to push your header file
 `FILE` 		| 	`DESCRIPTION`
 1. `0-isupper.c`  - a function that checks for uppercase character. Returns 1 if uppercase and returns 0 if otherwise.
- 
+2.`1-isdigit.c` 	 Write a function that checks for a digit (0 through 9).
+3. `2-mul.c`	Write a function that multiplies two integers.
+4. `3-print_numbers.c`	rite a function that prints the numbers, from 0 to 9, followed by a new line.
+5. `4-print_most_numbers.c`  
