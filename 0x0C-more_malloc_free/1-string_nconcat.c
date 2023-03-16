@@ -1,29 +1,49 @@
 #include "main.h"
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * string_nconcat - Allocates memory using malloc.
- * @n: The number of characters to concatinate
- * @s1: string 1
- * @s2: string 2
- * Return: A pointer to the allocated memory.
+ * string_nconcat - Concatenates two strings using at
+ *                  most an inputted number of bytes.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes of s2 to concatenate to s1.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - a pointer to the concatenated space in memory.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{	char *ptr;
-	size_t s1len = strlen(s1);
-	size_t s2len = strlen(s2);
+{
+	char *concat;
+	unsigned int lens1, len2, concat_len;
 
-	if (n < s2len)
+	if (s1 == NULL)
 	{
-		s2len = n;
+		s1 = "";
 	}
-	ptr = malloc(s1len + s2len + 1);
-	if (ptr == NULL)
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	lens1 = strlen(s1);
+	len2 = strlen(s2);
+
+	if (n >= len2)
+	{
+		concat_len = lens1 + len2;
+	}
+	else
+		concat_len = lens1 + n;
+
+	concat = malloc(concat_len + 1);
+
+	if (concat == NULL)
 	{
 		return (NULL);
 	}
-	strncpy(ptr, s1, s1len);
-	strncat(ptr, s2, s2len);
-		return (ptr);
+	memcpy(concat, s1, lens1);
+	memcpy(concat + lens1, s2, concat_len - lens1);
+
+	concat[concat_len] = '\0';
+	return (concat);
 }
