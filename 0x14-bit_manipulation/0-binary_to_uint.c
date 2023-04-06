@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stddef.h>
 #include <string.h>
-#include <math.h>
 /**
  * binary_to_uint - converts a binary number to unsigned int
  * @b: string containing the binary number
