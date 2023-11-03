@@ -9,7 +9,7 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	char *comma= "";
+	char *comma = "";
 	unsigned long int index = 0;
 	hash_node_t *tmp_node = NULL;
 
